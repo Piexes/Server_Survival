@@ -347,7 +347,7 @@ function animalDrop(%player)
 		%v = vectorAdd(%v,getRandom(-8,8) SPC getRandom(-8,8) SPC 10);
 		%Cotton.setVelocity(%v);
 	}
-	if(%player.getdatablock.getName() !$= "SkeletonArcherHoleBot" || %player.getdatablock().getName() !$= "SkeletonArmoredHoleBot" || %player.getdatablock().getName() !$= "SkeletonArmoredHoleBot")
+	if(%player.getdatablock().getName() !$= "SkeletonArcherHoleBot" || %player.getdatablock().getName() !$= "SkeletonArmoredHoleBot" || %player.getdatablock().getName() !$= "SkeletonArmoredHoleBot")
 	{
 		%Meat = new Item()
 		{

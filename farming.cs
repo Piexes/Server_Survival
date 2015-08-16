@@ -40,7 +40,7 @@ function completeGrowth(%brick)
 {
 	if(!isObject(%brick))
 		return;
-	%brick.setColor(56);
+	%brick.setColor(2);
 	%brick.isGrown = 1;
 }
 

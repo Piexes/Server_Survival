@@ -79,19 +79,19 @@ package SurvivalBuilding
 				if(%client.buildblock $= "Wood")
 				{
 					%t = WoodBrickData;
-					%color = 47;
+					%color = 44;
 					%fx = 0;
 				}
 				else if(%client.buildblock $= "String")
 				{
 					%t = StringBrickData;
-					%color = 1;
+					%color = 48;
 					%fx = 0;
 				}
 				else if(%client.buildblock $= "Metal")
 				{
 					%t = MetalBrickData;
-					%color = 3;
+					%color = 51;
 					%fx = 0;
 				}
 				else if(%client.buildblock $= "Cotton")
@@ -103,13 +103,13 @@ package SurvivalBuilding
 				else if(%client.buildblock $= "Manablock")
 				{
 					%t = ManaBrickData;
-					%color = 41;
+					%color = 6;
 					%fx = 6;
 				}
 				else if(%client.buildblock $= "Rock")
 				{
 					%t = RockBrickData;
-					%color = 4;
+					%color = 53;
 					%fx = 0;
 				}
 				else if(%client.buildblock $= "Wheat")
@@ -121,13 +121,13 @@ package SurvivalBuilding
 				else if(%client.buildblock $= "Grain")
 				{
 					%t = GrainBrickData;
-					%color = 57;
+					%color = 41;
 					%fx = 0;
 				}
 				else if(%client.buildblock $= "Seeds")
 				{
 					%t = SeedBrickData;
-					%color = 31;
+					%color = 4;
 					%fx = 0;
 				}
 				else

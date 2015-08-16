@@ -65,7 +65,11 @@ function servercmdCraft(%client, %item)
 	if(%item $= "ALL")
 	{
 		%client.chatMessage("\c3Item List:");
-		%client.chatMessage("\c3Sword: \c6A useful short-range weapon.");
+		%client.chatMessage("\c3Sword: \c6Pointy end goes into bad person.");
+		%client.chatMessage("\c3Mace: \c6A weapon useful for smashing enemies to death with a lot pointy bits.");
+		%client.chatMessage("\c3Voulge: \c6A weapon perfect for impaling your enemies multiple times with a sharp, tiny point.");
+		%client.chatMessage("\c3Winged Mace: \c6A weapon useful for ripping apart flesh with the many wings on the pointy end.");
+		%client.chatMessage("\c3Battleaxe: \c6A slow weapon perfect for smashing your enemies into a thousand flesh-biscuts in a single swing.");
 		%client.chatMessage("\c3Bow: \c6A powerful long-range weapon.");
 		%client.chatMessage("\c3Helmet: \c6A must-have armor peice that protects your head.");
 		%client.chatMessage("\c3Chestplate: \c6A necesary armor peice that protects your chest, and blocks the most damage.");
@@ -77,17 +81,77 @@ function servercmdCraft(%client, %item)
 		%client.chatMessage("\c3Seeds: \c6For any farmer, in order to grow crops you need seeds.");
 		return;
 	}
-	if(%item $= "Sword")
+	if(%item $= "Mace")
 	{
-		if(%client.has(Metal, 2, Wood, 1))
+		if(%client.has(Metal, 4))
 		{
 			%client.chatMessage("\c3Your item has been successfully crafted.");
-			%client.BPremove(Metal, 2, Wood, 1);
-			%client.player.addNewItem("Sword");
+			%client.BPremove(Metal, 4);
+			%client.player.addNewItem("Duel_M_Spike Club");
 		}
 		else
 		{
-			%client.chatMessage("\c3You don't have the right materials! This item requires two metal and one wood.");
+			%client.chatMessage("\c3You don't have the right materials! This item requires four metal.");
+		}
+		%client.refreshHUD();
+		return;
+	}
+	if(%item $= "Voulge")
+	{
+		if(%client.has(Metal, 3))
+		{
+			%client.chatMessage("\c3Your item has been successfully crafted.");
+			%client.BPremove(Metal, 3);
+			%client.player.addNewItem("Duel_M_Voulge");
+		}
+		else
+		{
+			%client.chatMessage("\c3You don't have the right materials! This item requires three metal.");
+		}
+		%client.refreshHUD();
+		return;
+	}
+	if(%item $= "Winged")
+	{
+		if(%client.has(Metal, 4))
+		{
+			%client.chatMessage("\c3Your item has been successfully crafted.");
+			%client.BPremove(Metal, 4);
+			%client.player.addNewItem("Duel_M_Winged");
+		}
+		else
+		{
+			%client.chatMessage("\c3You don't have the right materials! This item requires four metal.");
+		}
+		%client.refreshHUD();
+		return;
+	}
+	if(%item $= "Battleaxe")
+	{
+		if(%client.has(Metal, 2, Wood, 2))
+		{
+			%client.chatMessage("\c3Your item has been successfully crafted.");
+			%client.BPremove(Metal, 4);
+			%client.player.addNewItem("Duel_M_BattleHammer");
+		}
+		else
+		{
+			%client.chatMessage("\c3You don't have the right materials! This item requires two metal and two wood.");
+		}
+		%client.refreshHUD();
+		return;
+	}
+	if(%item $= "Sword")
+	{
+		if(%client.has(Metal, 4, Wood, 1))
+		{
+			%client.chatMessage("\c3Your item has been successfully crafted.");
+			%client.BPremove(Metal, 4);
+			%client.player.addNewItem("Duel_M_Falchion");
+		}
+		else
+		{
+			%client.chatMessage("\c3You don't have the right materials! This item requires four metal and one wood.");
 		}
 		%client.refreshHUD();
 		return;

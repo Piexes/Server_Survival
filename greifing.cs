@@ -137,19 +137,19 @@ package CharmLoading
 		if(%brick.getDatablock().category $= "SurvivalRPG")
 		{
 			if(%brick.getDatablock().getName() $= "WoodBrickData")
-				%color = 47;
+				%color = 44;
 			else if(%brick.getDatablock().getName() $= "StringBrickData")
-				%color = 1;
+				%color = 48;
 			else if(%brick.getDatablock().getName() $= "MetalBrickData")
-				%color = 3;
+				%color = 51;
 			else if(brick.getDatablock().getName() $= "RockBrickData")
-				%color = 4;
+				%color = 53;
 			else if(%brick.getDatablock().getName() $= "WheatBrickData")
 				%color = 45;
 			else if(%brick.getDatablock().getName() $= "GrainBrickData")
-				%color = 57;
+				%color = 41;
 			else if(%brick.getDatablock().getName() $= "SeedBrickData")
-				%color = 31;
+				%color = 4;
 			else if(%brick.getDatablock().getName() $= "ManaBrickData")
 			{
 				%fx = 6;
